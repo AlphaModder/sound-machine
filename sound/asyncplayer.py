@@ -140,7 +140,7 @@ class InstrumentPlayer(KeyedAsyncPlayer):
         """
         All parameters are passed directly through to `instrument.note()`
         """
-        sig = self.instrument(note, *args, **kwargs)
+        sig = self.instrument.note(note, *args, **kwargs)
         super(InstrumentPlayer, self).play(note, sig)
 
 class GuitarStrummer(KeyedAsyncPlayer):
